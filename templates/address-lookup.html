@@ -1,9 +1,9 @@
 {{<partials-page}}
   {{$page-content}}
-    <label>{{postcodeLabel}}</label>
     <p>
-      <span class="postcode">{{postcode}}</span>
-      <span class="link"><a class="change-postcode" href="{{#qs}}step=postcode{{/qs}}">{{editLink}}</a></span>
+      <label>{{postcodeEntered}}</label>
+      <strong><span class="postcode">{{postcode}}</span></strong>
+      <strong><span class="link"><a class="change-postcode" href="{{#qs}}step=postcode{{/qs}}">{{editLink}}</a></span></strong>
     </p>
     {{#fields}}
       {{#renderField}}{{/renderField}}
