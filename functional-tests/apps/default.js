@@ -8,7 +8,8 @@ module.exports = {
       behaviours: AddressLookup({
         addressKey: 'address-one',
         apiSettings: {
-          authorization: process.env.POSTCODE_AUTH
+          authorization: process.env.POSTCODE_AUTH,
+          hostname: 'http://localhost:8080/api/postcode-test'
         },
         validate: {
           allowedCountries: ['England']
