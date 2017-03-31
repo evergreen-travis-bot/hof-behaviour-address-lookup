@@ -3,6 +3,7 @@
 const Browser = require('./lib/browser');
 const App = require('./lib/app');
 const assert = require('assert');
+const config = require('./config.js');
 
 describe('tests', () => {
   let browser;
@@ -10,7 +11,7 @@ describe('tests', () => {
   let port;
 
   before(() => {
-    app = App(require('./apps/default')).listen();
+    app = App(require('./apps/default')).listen(config.port);
     port = app.address().port;
   });
 

@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 const partials = require('express-partial-templates');
 const template = require('hof-govuk-template');
 const cookieParser = require('cookie-parser');
-const mockPostcode = require('../../mock-postcode');
+const mockPostcode = require('./mock-postcode');
 
 const Wizard = require('hof-form-wizard');
 
