@@ -21,6 +21,7 @@ module.exports = {
 ## Options
 
 * `addressKey` - REQUIRED - the key used to store the formatted address after lookup
+* `required` - if set to a truthy value then the address is required. By default a user can pass through without entering an address.
 * apiSettings - settings to pass to the Model on init. Default MOJ lookup api expects `hostname`, `authorization`, `paths.lookup` and `paths.validate`
 * `Model` - a custom Model which exposes a `fetch` method (and `validate` if using api validation). Both `fetch` and `validate` are expected to return a `Promise`
 * `validate` - a map of validators to pass to the Model's validate method. The default implementation supports `allowedCountries` which is an Array of accepted countries. - for only English addresses use:
