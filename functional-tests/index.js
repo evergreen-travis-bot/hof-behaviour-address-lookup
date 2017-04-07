@@ -8,11 +8,9 @@ const config = require('./config.js');
 describe('tests', () => {
   let browser;
   let app;
-  let port;
 
   before(() => {
     app = App(require('./apps/default')).listen(config.port);
-    port = app.address().port;
   });
 
   after(() => {
@@ -20,7 +18,7 @@ describe('tests', () => {
   });
 
   beforeEach(() => {
-    browser = Browser().url(`http://localhost:${port}`);
+    browser = Browser().url(`http://localhost:${config.port}`);
     return browser;
   });
 
