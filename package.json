@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm run test:lint && npm run test:functional",
     "test:lint": "eslint .",
-    "test:functional": "funkie mocha ./functional-tests --opts ./functional-tests/mocha.opts"
+    "test:functional": "funkie mocha"
   },
   "keywords": [],
   "author": "",
