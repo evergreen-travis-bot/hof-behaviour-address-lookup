@@ -3,15 +3,14 @@
 const Browser = require('./lib/browser');
 const App = require('./lib/app');
 const assert = require('assert');
+const config = require('./config.js');
 
 describe('tests', () => {
   let browser;
   let app;
-  let port;
 
   before(() => {
-    app = App(require('./apps/default')).listen();
-    port = app.address().port;
+    app = App(require('./apps/default')).listen(config.port);
   });
 
   after(() => {
@@ -19,7 +18,7 @@ describe('tests', () => {
   });
 
   beforeEach(() => {
-    browser = Browser().url(`http://localhost:${port}`);
+    browser = Browser().url(`http://localhost:${config.port}`);
     return browser;
   });
 
