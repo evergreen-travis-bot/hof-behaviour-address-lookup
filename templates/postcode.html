@@ -4,6 +4,6 @@
       {{#renderField}}{{/renderField}}
     {{/fields}}
     <p><span class="link"><a href="{{#qs}}step=manual{{/qs}}">{{enterManually}}</a></span></p>
-    {{#input-submit}}continue{{/input-submit}}
+    {{#input-submit}}{{findAddress}}{{/input-submit}}
   {{/page-content}}
 {{/partials-page}}
