@@ -50,4 +50,4 @@ The following keys are expected to be defined in your translations file.
 * `fields.{key}-postcode.label` - Label for the postcode field when shown on the lookup and manual steps. Defaults to `'Postcode'`
 * `pages.address-lookup.postcode-api.not-found` - Message to show if postcode not found. Defaults to `'Sorry – we couldn’t find any addresses for that postcode, enter your address manually'`
 * `pages.address-lookup.postcode-api.cant-connect` - Message to show if unable to connect to the lookup service. Defaults to `'Sorry – we couldn’t connect to the postcode lookup service at this time, enter your address manually'`
-* `pages.address-lookup.find-address` - Postcode submit button text. Defaults to 'Find address'
+* `buttons.find-address` - Postcode submit button text. Required.
