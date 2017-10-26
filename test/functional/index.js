@@ -155,14 +155,14 @@ describe('Functional tests', () => {
 
   describe('backlink', () => {
     before(() => {
-      app = App(require('./apps/required')).listen(config.port);
+      app = App(require('./apps/required')(config)).listen(config.port);
     });
 
     after(() => {
       app.close();
     });
 
-    it('goes back to postcode step when clicking back link from the lookup step', () => {
+    it('goes back to postcode step when clicking back link from the lookup step', () =>
       browser.url('/one')
         .$('input')
         .setValue('CR0 2EU')
@@ -177,7 +177,7 @@ describe('Functional tests', () => {
         .then(url => {
           assert.ok(url.includes('step=postcode'));
         })
-    });
+    );
 
 
     it('goes back to postcode step when clicking back link from the manual step', () => {
