@@ -153,4 +153,35 @@ describe('Functional tests', () => {
 
   });
 
+  describe('backlink', () => {
+    before(() => {
+      app = App(require('./apps/required')).listen(config.port);
+    });
+
+    after(() => {
+      app.close();
+    });
+
+    it('goes back to postcode step when clicking back link from the lookup step', () => {
+      browser.url('/one')
+        .$('input')
+        .setValue('CR0 2EU')
+        .submitForm('form')
+        .getUrl()
+        .then(url => {
+          assert.ok(url.includes('step=lookup'));
+        })
+        .$('#step a')
+        .click()
+        .getUrl()
+        .then(url => {
+          assert.ok(url.includes('step=postcode'));
+        })
+    });
+
+
+    it('goes back to postcode step when clicking back link from the manual step', () => {
+
+    });
+  });
 });
