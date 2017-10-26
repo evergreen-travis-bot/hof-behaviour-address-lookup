@@ -2,14 +2,14 @@
 
 const AddressLookup = require('../../../');
 
-module.exports = {
+module.exports = config => ({
   steps: {
     '/one': {
       behaviours: AddressLookup({
         addressKey: 'address-one',
         required: true,
         apiSettings: {
-          hostname: 'http://localhost:8081/api/postcode-test'
+          hostname: `http://localhost:${config.port}/api/postcode-test`
         },
         validate: {
           allowedCountries: ['England']
@@ -19,4 +19,4 @@ module.exports = {
     },
     '/two': {}
   }
-};
+});

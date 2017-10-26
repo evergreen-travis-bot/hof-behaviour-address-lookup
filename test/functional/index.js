@@ -19,7 +19,7 @@ describe('Functional tests', () => {
   describe('default behaviour', () => {
 
     before(() => {
-      app = App(require('./apps/default')).listen(config.port);
+      app = App(require('./apps/default')(config)).listen(config.port);
     });
 
     after(() => {
@@ -134,7 +134,7 @@ describe('Functional tests', () => {
   describe('required', () => {
 
     before(() => {
-      app = App(require('./apps/required')).listen(config.port);
+      app = App(require('./apps/required')(config)).listen(config.port);
     });
 
     after(() => {
