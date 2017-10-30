@@ -5,6 +5,9 @@ const AddressLookup = require('../../../');
 module.exports = config => ({
   steps: {
     '/one': {
+      next: '/two'
+    },
+    '/two': {
       behaviours: AddressLookup({
         addressKey: 'address-one',
         apiSettings: {
@@ -14,8 +17,6 @@ module.exports = config => ({
           allowedCountries: ['England']
         }
       }),
-      next: '/two'
-    },
-    '/two': {}
+    }
   }
 });
