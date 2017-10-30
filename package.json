@@ -1,6 +1,6 @@
 {
   "name": "hof-behaviour-address-lookup",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "A HOF Behaviour for a multi-step postcode lookup",
   "main": "index.js",
   "scripts": {
